@@ -142,4 +142,7 @@ export const OpencodeSteerPlugin: Plugin = async ({ client, directory }) => {
 	} as Hooks
 }
 
-export default OpencodeSteerPlugin
+export default {
+	id: "opencode-steer",
+	server: OpencodeSteerPlugin,
+}
