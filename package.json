@@ -1,0 +1,19 @@
+{
+  "name": "opencode-steer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean:test-dist": "node -e \"require('node:fs').rmSync('tests/dist', { recursive: true, force: true })\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:test": "npm run clean:test-dist && tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test tests/dist/tests/steer.test.js && npm run clean:test-dist"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.4.6",
+    "@opencode-ai/sdk": "^1.4.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2"
+  }
+}
