@@ -1,3 +1,7 @@
+# Non working beta, do not use for other than dev 
+# contributions are welcome!
+
+---
 # opencode-steer
 
 Local nested plugin repo that adds `/steer 'message'` through the TUI and rewrites the submitted slash command into the steer message.
